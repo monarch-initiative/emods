@@ -1,4 +1,5 @@
 """emods package."""
+
 import importlib_metadata
 
 try:
