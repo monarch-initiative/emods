@@ -5,37 +5,24 @@
 Monarch and Linda Crrnic Center project on phenotype identification
 **TODO: Add more detailed information about the project**
 
-# Setting Up a New Project -- Delete this section when completed
-
-Upon creating a new project from the `cookiecutter-monarch-ingest` template, there are a few steps you should take to finish setting up the project. First, change into the newly created project.
+# Getting Started
+To get started with development in the emods project first clone the repository and enter the new directory
 
 ```bash
+git clone git@github.com:monarch-initiative/emods.git
 cd emods
 ```
 
-#### GitHub Repository
-1. Create a new repository on GitHub.
-1. Enable GitHub Actions to read and write to the repository (required to deploy the project to GitHub Pages).
-   - in GitHub, go to Settings -> Action -> General -> Workflow permissions and choose read and write permissions
-1. Initialize the local repository and push the code to GitHub. For example:
-
-   ```bash
-   git init
-   git remote add origin https://github.com/monarch-initiative/emods.git
-   git add -A && git commit -m "Initial commit"
-   git push -u origin main
-   ```
-
-#### Setup Python Environment and Install Poetry
+## Setup Python Environment and Install Poetry
 To finish setting up the project first we'll need to set up a Python development environment. You can either use your system `poetry` or install it within a repository virtual environment.
 
-##### Use System Poetry
+### Use System Poetry
 To use you're system `poetry`, install `poetry` if you haven't already.
 ```
 pip install poetry
 ```
 
-##### Install Poetry in a Virtual Environment
+### Install Poetry in a Virtual Environment
 To use poetry within a virtual environmen and install `poetry` to the environment use your system Python or install `pyenv` and select your python version with `pyenv local 3.13`. Then create a virtual environment and install poetry to it. You will also want to add `cruft` to the virtual environment to keep updated with this template.
 ```
 pyenv 3.12
@@ -45,13 +32,13 @@ pip install poetry
 pip install cruft
 ```
 
-#### Install Dependencies
+## Install Dependencies
 Now that we have the basic repository set up and the background dependencies, we can set up the dependencies for the rest of the project. First, we'll use poetry to install project dependencies.
 ```
 poetry install
 ```
 
-##### Add `poetry-dynamic-versioning` as a plugin
+### Add `poetry-dynamic-versioning` as a plugin
 Our usage of poetry requires the dynamic versionining plugin.
 ```
 poetry self add "poetry-dynamic-versioning[plugin]"
@@ -61,19 +48,19 @@ poetry self add "poetry-dynamic-versioning[plugin]"
 poetry add poetry-dynamic-versioning
 ```
 
-#### Set-up `pre-commit`
+## Set-up `pre-commit`
 `pre-commit` runs hooks on every commit to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements. For more information click [here](https://pre-commit.com).
 
 ```
 poetry run pre-commit install
 ```
-which will result in the message: 
+which will result in the message:
 ```
 pre-commit installed at .git/hooks/pre-commit
-``` 
+```
 This indicates that you have a successful `pre-commit` setup.
 
-#### Run `tox` to see if the setup works
+## Run `tox` to see if the setup works
 ```
 poetry run tox
 ```
@@ -102,16 +89,6 @@ Should return "Hello, World"
 
 To run commands within the poetry environment either preface the command with `poetry run`, i.e. `poetry run /path-to/my-command --options` or open the poetry shell with `poetry shell`.
 
-#### Documentation
-1. Update this `README.md` file with any additional information about the project.
-1. Add any appropriate documentation to the `docs` directory.
-
-> **Note:** After the GitHub Actions for deploying documentation runs, the documentation will be automatically deployed to GitHub Pages.  
-> However, you will need to go to the repository settings and set the GitHub Pages source to the `gh-pages` branch, using the `/docs` directory.
-
-#### Remove - Setting Up a New Project -- Delete this section when completed
-Once you have completed these steps, you can remove the [Setting Up a New Project](#setting-up-a-new-project) section from this `README.md` file. Removal ends with this section.
-
 # Requirements
 - Python >= 3.12
 - [Poetry](https://python-poetry.org/docs/#installation)
@@ -135,7 +112,7 @@ Once you have completed these steps, you can remove the [Setting Up a New Projec
    -  `codespell`
    -  `docstr-coverage`
    -  `pytest`
-- `LICENSE` file based on the choice made during setup. 
+- `LICENSE` file based on the choice made during setup.
 - `README.md` file containing `project_description` value entered during setup.
 
 # Future updates to the project's boilerplate code
@@ -199,14 +176,14 @@ Indices and tables
 * :ref:`search`
 
 ```
-This lets sphinx know to look for theses rst files and generate equivalent HTML files.
+This lets sphinx know to look for these rst files and generate equivalent HTML files.
 
-Documentation is automatically built and deployed via the github workflow `deploy-docs.yml`. 
-When changes are added to the main branch, this workflow is triggered. For this to work, the user needs to 
-set-up the github repository of the project to enable documentation from a specific branch. In the `Settings` tab 
+Documentation is automatically built and deployed via the github workflow `deploy-docs.yml`.
+When changes are added to the main branch, this workflow is triggered. For this to work, the user needs to
+set-up the github repository of the project to enable documentation from a specific branch. In the `Settings` tab
 of the repository, click the `Pages` section in the left bar. For the `Branch`, choose the `gh-pages` branch.
 
-The full GitHub Pages documentation can be found [here](https://docs.github.com/en/pages/quickstart). 
+The full GitHub Pages documentation can be found [here](https://docs.github.com/en/pages/quickstart).
 
 # Acknowledgements
 
