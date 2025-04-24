@@ -12,6 +12,7 @@ click = "*"
 importlib-metadata = ">=8.2.0"
 duckdb = "^1.2.2"
 pandas = "^2.2.3"
+jupyter = "^1.1.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = {version = ">=8.3.2"}
