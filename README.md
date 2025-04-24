@@ -89,6 +89,12 @@ Should return "Hello, World"
 
 To run commands within the poetry environment either preface the command with `poetry run`, i.e. `poetry run /path-to/my-command --options` or open the poetry shell with `poetry shell`.
 
+# Run Jupyter notebooks
+To run the Jupyter notebooks in the `notebooks/` directory you will need to do so through poetry.
+```
+poetry run jupyter lab
+```
+
 # Requirements
 - Python >= 3.12
 - [Poetry](https://python-poetry.org/docs/#installation)
