@@ -24,3 +24,7 @@ repos:
     additional_dependencies:
       - tomli
     exclude: poetry.lock
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.6.1
+  hooks:
+    - id: nbstripout
